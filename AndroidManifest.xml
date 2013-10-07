@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:parentActivityName="om.twotowersstudios.quizmaker.MainTitleScreen" 
+            android:parentActivityName="com.twotowersstudios.quizmaker.MainTitleScreen" 
             android:name="com.twotowersstudios.quizmaker.ReportABugActivity"
             android:label="@string/title_activity_report_abug" >
         </activity>
