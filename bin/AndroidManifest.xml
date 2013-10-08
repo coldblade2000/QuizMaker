@@ -9,11 +9,13 @@
         android:minSdkVersion="11"
         android:targetSdkVersion="18" />
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        
         <activity
             android:name="com.twotowersstudios.quizmaker.MainTitleScreen"
             android:label="@string/app_name" >
@@ -29,8 +31,10 @@
             android:parentActivityName="com.twotowersstudios.quizmaker.MainTitleScreen" >
         </activity>
         <activity
+            
             android:name="com.twotowersstudios.quizmaker.MakeQuizActivity"
-            android:label="@string/title_activity_make_quiz" >
+            android:label="@string/title_activity_make_quiz"
+            android:parentActivityName="com.twotowersstudios.quizmaker.MainTitleScreen" >
         </activity>
     </application>
 
