@@ -25,5 +25,9 @@ public class MainTitleScreen extends Activity {
     	Intent OpenReportBug = new Intent(this, ReportABugActivity.class);
     	startActivity(OpenReportBug);
     }
+    public void OpenMakeQuiz(View view) {
+    	Intent OpenMakeQuizIntent = new Intent(this, MakeQuizActivity.class);
+    	startActivity(OpenMakeQuizIntent);
+    }
     
 }

@@ -1,0 +1,120 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MakeQuizActivity" >
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Question 1"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/Q1Actual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TextView01"
+        android:layout_below="@+id/TextView01"
+        android:ems="10"
+        android:hint="Write the question here"
+        android:inputType="textMultiLine" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/Q1A1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Q1Actual"
+        android:layout_below="@+id/Q1Actual"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Possible Answer 1" />
+
+    <EditText
+        android:id="@+id/Q1A2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Q1A1"
+        android:layout_below="@+id/Q1A1"
+        android:ems="10"
+        android:hint="Possible Answer 2" />
+
+    <EditText
+        android:id="@+id/Q1A3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Q1A2"
+        android:layout_below="@+id/Q1A2"
+        android:ems="10"
+        android:hint="Possible Answer 3" />
+
+    <EditText
+        android:id="@+id/Q1A4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Q1A3"
+        android:layout_below="@+id/Q1A3"
+        android:ems="10"
+        android:hint="Possible Answer 4" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Q1A4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:text="Send" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Q1Actual"
+        android:layout_alignParentRight="true"
+        android:text="Right Question"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <RadioButton
+        android:id="@+id/RQ1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Q1A1"
+        android:text="1" />
+
+    <RadioButton
+        android:id="@+id/RQ2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Q1A3"
+        android:layout_alignLeft="@+id/RQ1"
+        android:text="2" />
+
+    <RadioButton
+        android:id="@+id/RQ3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Q1A4"
+        android:layout_alignLeft="@+id/RQ2"
+        android:text="3" />
+
+    <RadioButton
+        android:id="@+id/RQ4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignLeft="@+id/RQ3"
+        android:text="4" />
+
+</RelativeLayout>

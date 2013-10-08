@@ -11,5 +11,6 @@
     <string name="MainTitleBottomText">All Rights Reserved</string>
     <string name="title_activity_report_abug">Report A Bug</string>
     <string name="DevEmail1">Please report any bugs to the developer by using the button below or sending an email to: diegogranada7@gmail.com</string>
+    <string name="title_activity_make_quiz">Make A Quiz</string>
 
 </resources>
