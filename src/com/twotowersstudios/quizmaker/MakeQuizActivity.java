@@ -11,6 +11,7 @@ import org.dom4j.io.XMLWriter;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
 
@@ -26,12 +27,14 @@ public class MakeQuizActivity extends Activity {
 	private String rightAnswerValue;
 	
 	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_make_quiz);
-	}
-
+		
+		}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -43,15 +46,13 @@ public class MakeQuizActivity extends Activity {
 	EditText Q1A2 = (EditText)findViewById(R.id.Q1A2);
 	EditText Q1A3 = (EditText)findViewById(R.id.Q1A3);
 	EditText Q1A4 = (EditText)findViewById(R.id.Q1A4);
-
 	String Q1Str = Q1.getText().toString();
 	String Q1A1Str = Q1A1.getText().toString();
 	String Q1A2Str = Q1A2.getText().toString();
 	String Q1A3Str = Q1A3.getText().toString();
 	String Q1A4Str = Q1A4.getText().toString();
-
 	
-	/**public void rightAnswerSelection (View view){
+	public void rightAnswerSelection (View view){
 		if (JRQ1A1.isChecked()){
 			 rightAnswerValue = "@id/Q1A1";
 		}else if (JRQ1A2.isChecked()){
@@ -61,7 +62,7 @@ public class MakeQuizActivity extends Activity {
 		}else if (JRQ1A4.isChecked()){
 			 rightAnswerValue = "@id/Q1A4";
 		}
-	}*/
+	}
 	public void createXML() throws IOException {
 		if (JRQ1A1.isChecked()){
 			 rightAnswerValue = "@id/Q1A1";
@@ -97,6 +98,4 @@ public class MakeQuizActivity extends Activity {
 
 	}
 	
-	
-
 }

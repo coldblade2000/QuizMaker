@@ -31,7 +31,6 @@
             android:parentActivityName="com.twotowersstudios.quizmaker.MainTitleScreen" >
         </activity>
         <activity
-            
             android:name="com.twotowersstudios.quizmaker.MakeQuizActivity"
             android:label="@string/title_activity_make_quiz"
             android:parentActivityName="com.twotowersstudios.quizmaker.MainTitleScreen" >
