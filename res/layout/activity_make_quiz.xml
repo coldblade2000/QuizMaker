@@ -74,7 +74,8 @@
         android:layout_below="@+id/Q1A4"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="78dp"
-        android:text="Send" />
+        android:text="Send"
+        android:onClick="createXML" />
 
     <TextView
         android:id="@+id/textView1"
