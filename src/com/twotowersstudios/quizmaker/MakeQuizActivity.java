@@ -11,7 +11,6 @@ import org.xmlpull.v1.XmlSerializer;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.Xml;
 import android.view.Menu;
 import android.view.View;
@@ -29,7 +28,7 @@ public class MakeQuizActivity extends Activity {
     private RadioButton JRQ1A2;
     private RadioButton JRQ1A3;
     private RadioButton JRQ1A4;
-    private String rightAnswerValue;
+    public String rightAnswerValue;
        
        
        
@@ -60,31 +59,20 @@ public class MakeQuizActivity extends Activity {
         }
         public void createXML(View view) throws IOException, ParserConfigurationException, TransformerException {
                 EditText Q1 = (EditText)findViewById(R.id.Q1Actual);
-                EditText Q1A1 = (EditText)findViewById(R.id.Q1A1);
-                EditText Q1A2 = (EditText)findViewById(R.id.Q1A2);
-                EditText Q1A3 = (EditText)findViewById(R.id.Q1A3);
-                EditText Q1A4 = (EditText)findViewById(R.id.Q1A4);
+                EditText Q1RA = (EditText)findViewById(R.id.Q1RA);
+                EditText Q1WA1 = (EditText)findViewById(R.id.Q1WA1);
+                EditText Q1WA2 = (EditText)findViewById(R.id.Q1WA2);
+                EditText Q1WA3 = (EditText)findViewById(R.id.Q1WA3);
+                EditText FileNameRaw = (EditText)findViewById(R.id.TQ1);
                 String Q1Str = Q1.getText().toString();
-                String Q1A1Str = Q1A1.getText().toString();
-                String Q1A2Str = Q1A2.getText().toString();
-                String Q1A3Str = Q1A3.getText().toString();
-                String Q1A4Str = Q1A4.getText().toString();
-               
-                JRQ1A1 = (RadioButton) findViewById(R.id.RQ1A1);
-                JRQ1A2 = (RadioButton) findViewById(R.id.RQ1A2);
-                JRQ1A3 = (RadioButton) findViewById(R.id.RQ1A3);
-                JRQ1A4 = (RadioButton) findViewById(R.id.RQ1A4);
-                if (JRQ1A1.isSelected()){
-                         rightAnswerValue = "A1";
-                }else if (JRQ1A2.isSelected()){
-                         rightAnswerValue = "A2";
-                }else if (JRQ1A3.isSelected()){
-                         rightAnswerValue = "A3";
-                }else if (JRQ1A4.isSelected()){
-                         rightAnswerValue = "A4";
-                }
+                String Q1RAStr = Q1RA.getText().toString();
+                String Q1WA1Str = Q1WA1.getText().toString();
+                String Q1WA2Str = Q1WA2.getText().toString();
+                String Q1WA3Str = Q1WA3.getText().toString();
+                String FileNameStr = FileNameRaw.getText().toString();
+       
                 
-                String filename = "Questions.xml";
+                String filename = FileNameStr + ".xml";
 
                 FileOutputStream fos;       
 
@@ -103,97 +91,31 @@ public class MakeQuizActivity extends Activity {
                 		serializer.text(Q1Str);
                 		serializer.endTag(null,  "Q1Text");
                 		
-                		serializer.startTag(null, "Q1A1");
-                		serializer.text(Q1A1Str);
-                		serializer.endTag(null, "Q1A1");
+                		serializer.startTag(null, "Q1RA");
+                		serializer.text(Q1RAStr);
+                		serializer.endTag(null, "Q1RA");
                 		
                 		serializer.startTag(null, "Q1A2");
-            			serializer.text(Q1A2Str);
+            			serializer.text(Q1WA1Str);
             			serializer.endTag(null, "Q1A2");
             		
             			serializer.startTag(null, "Q1A3");
-            			serializer.text(Q1A3Str);
+            			serializer.text(Q1WA2Str);
         				serializer.endTag(null, "Q1A3");
         		
         				serializer.startTag(null, "Q1A4");
-        				serializer.text(Q1A4Str);
+        				serializer.text(Q1WA3Str);
         				serializer.endTag(null, "Q1A4");
                 		
                 serializer.endTag(null, "Question1");
 
-                /*for(int j = 0 ; j < 3 ; j++)
-                {
-
-                    serializer.startTag(null, "record");
-
-                    serializer.text(data);
-
-                    serializer.endTag(null, "record");
-                }*/
+                
                  serializer.endDocument();
 
                  serializer.flush();
 
                  fos.close();
-                 Log.e("QuizMaker", "Location of file is in: " + fos.toString());
-                /**DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
-
-    			DocumentBuilder documentBuilder = documentFactory.newDocumentBuilder();
-
-    			Document document = documentBuilder.newDocument();
-
-    			// root element
-    			Element root = document.createElement("Questions");
-    			document.appendChild(root);
-
-    			// employee element
-    			Element Question1 = document.createElement("Question1");
-
-    			root.appendChild(Question1);
-
-    			// set an attribute to staff element
-    			Attr attr = document.createAttribute("rightQuestion");
-    			attr.setValue("10");
-    			Question1.setAttributeNode(attr);
-
-    			//you can also use staff.setAttribute("id", "1") for this
-
-    			// firstname element
-    			Element Question1Text = document.createElement("QuestionText");
-    			Question1Text.appendChild(document.createTextNode(Q1Str));
-    			Question1.appendChild(Question1Text);
-
-    			// lastname element
-    			Element Question1A1 = document.createElement("Q1A1");
-    			Question1A1.appendChild(document.createTextNode(Q1A1Str));
-    			Question1.appendChild(Question1A1);
-
-    			Element Question1A2 = document.createElement("Q1A2");
-    			Question1A2.appendChild(document.createTextNode(Q1A1Str));
-    			Question1.appendChild(Question1A2);
-    			
-    			Element Question1A3 = document.createElement("Q1A3");
-    			Question1A3.appendChild(document.createTextNode(Q1A1Str));
-    			Question1.appendChild(Question1A3);
-    			
-    			Element Question1A4 = document.createElement("Q1A4");
-    			Question1A4.appendChild(document.createTextNode(Q1A1Str));
-    			Question1.appendChild(Question1A4);
-
-    			// create the xml file
-    			//transform the DOM Object to an XML File
-    			TransformerFactory transformerFactory = TransformerFactory.newInstance();
-    			Transformer transformer = transformerFactory.newTransformer();
-    			DOMSource domSource = new DOMSource(document);
-    			StreamResult streamResult = new StreamResult(new File(xmlFilePath));
-
-    			// If you use
-    			// StreamResult result = new StreamResult(System.out);
-    			// the output will be pushed to the standard output ...
-    			// You can use that for debugging 
-
-    			transformer.transform(domSource, streamResult);*/
-        	
+                
         }
         
 

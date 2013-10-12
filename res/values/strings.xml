@@ -3,7 +3,6 @@
 
     <string name="app_name">Quiz Maker</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
     <string name="TitleMainString">Welcome to the Quiz Maker</string>
     <string name="TitleText">Welcome to the quiz maker, please open an existing quiz or create a custom quiz with the buttons down below</string>
     <string name="OpenQuizMainTitleButton">Open an existing quiz</string>
@@ -12,5 +11,13 @@
     <string name="title_activity_report_abug">Report A Bug</string>
     <string name="DevEmail1">Please report any bugs to the developer by using the button below or sending an email to: diegogranada7@gmail.com</string>
     <string name="title_activity_make_quiz">Make A Quiz</string>
+    <string name="MakeQuizButton">Send</string>
+    <string name="Question1TextBoxMakeQuiz">Write your question here</string>
+    <string name="RightAnswerMakeQuiz">Write the correct answer here</string>
+    <string name="IncorrectAnswerMakeQuiz">Write an incorrect answer here</string>
+    <string name="TitleQuestionMakeQuiz">Write a short title</string>
+    <string name="Question1MakeQuiz">Question 1</string>
+    <string name="ReportBugMainScreen">Report a Bug</string>
+    <string name="SendBugReportReportABug">Send Bug Report</string>
 
 </resources>

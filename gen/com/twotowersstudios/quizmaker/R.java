@@ -24,18 +24,14 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int Q1A1=0x7f080008;
-        public static final int Q1A2=0x7f080009;
-        public static final int Q1A3=0x7f08000a;
-        public static final int Q1A4=0x7f08000b;
-        public static final int Q1Actual=0x7f080007;
-        public static final int RQ1A1=0x7f08000d;
-        public static final int RQ1A2=0x7f08000e;
-        public static final int RQ1A3=0x7f08000f;
-        public static final int RQ1A4=0x7f080010;
-        public static final int RightAnswer=0x7f08000c;
-        public static final int TextView01=0x7f080006;
-        public static final int action_settings=0x7f080011;
+        public static final int Q1Actual=0x7f080006;
+        public static final int Q1RA=0x7f080008;
+        public static final int Q1WA1=0x7f08000b;
+        public static final int Q1WA2=0x7f08000a;
+        public static final int Q1WA3=0x7f080009;
+        public static final int TQ1=0x7f08000c;
+        public static final int TextView01=0x7f080007;
+        public static final int action_settings=0x7f08000d;
         public static final int button1=0x7f080004;
         public static final int button2=0x7f080002;
         public static final int button3=0x7f080005;
@@ -54,17 +50,24 @@ public final class R {
         public static final int report_abug=0x7f070002;
     }
     public static final class string {
-        public static final int DevEmail1=0x7f050009;
-        public static final int MainTitleBottomText=0x7f050007;
-        public static final int MakeQuizMainTitleButton=0x7f050006;
-        public static final int OpenQuizMainTitleButton=0x7f050005;
-        public static final int TitleMainString=0x7f050003;
-        public static final int TitleText=0x7f050004;
+        public static final int DevEmail1=0x7f050008;
+        public static final int IncorrectAnswerMakeQuiz=0x7f05000d;
+        public static final int MainTitleBottomText=0x7f050006;
+        public static final int MakeQuizButton=0x7f05000a;
+        public static final int MakeQuizMainTitleButton=0x7f050005;
+        public static final int OpenQuizMainTitleButton=0x7f050004;
+        public static final int Question1MakeQuiz=0x7f05000f;
+        public static final int Question1TextBoxMakeQuiz=0x7f05000b;
+        public static final int ReportBugMainScreen=0x7f050010;
+        public static final int RightAnswerMakeQuiz=0x7f05000c;
+        public static final int SendBugReportReportABug=0x7f050011;
+        public static final int TitleMainString=0x7f050002;
+        public static final int TitleQuestionMakeQuiz=0x7f05000e;
+        public static final int TitleText=0x7f050003;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
-        public static final int hello_world=0x7f050002;
-        public static final int title_activity_make_quiz=0x7f05000a;
-        public static final int title_activity_report_abug=0x7f050008;
+        public static final int title_activity_make_quiz=0x7f050009;
+        public static final int title_activity_report_abug=0x7f050007;
     }
     public static final class style {
         /** 

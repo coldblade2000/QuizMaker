@@ -26,6 +26,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
         android:onClick="SendBugReport"
-        android:text="Send Bug Report" />
+        android:text="@string/SendBugReportReportABug" />
 
 </RelativeLayout>
