@@ -15,19 +15,14 @@ import android.util.Xml;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.RadioButton;
  
 public class MakeQuizActivity extends Activity {
         /**String filename = "Question1.xml";
         String string = "";
         FileOutputStream outputStream;
          * @return */
-	public static final String xmlFilePath = "/storage/sdcard0/Quizmakerassets";
 
-    private RadioButton JRQ1A1;
-    private RadioButton JRQ1A2;
-    private RadioButton JRQ1A3;
-    private RadioButton JRQ1A4;
+
     public String rightAnswerValue;
        
        
@@ -46,17 +41,7 @@ public class MakeQuizActivity extends Activity {
                 return true;
         }
        
-        public void rightAnswerSelection (View view){
-                if (JRQ1A1.isChecked()){
-                         rightAnswerValue = "@id/Q1A1";
-                }else if (JRQ1A2.isChecked()){
-                         rightAnswerValue = "@id/Q1A2";
-                }else if (JRQ1A3.isChecked()){
-                         rightAnswerValue = "@id/Q1A3";
-                }else if (JRQ1A4.isChecked()){
-                         rightAnswerValue = "@id/Q1A4";
-                }
-        }
+
         public void createXML(View view) throws IOException, ParserConfigurationException, TransformerException {
                 EditText Q1 = (EditText)findViewById(R.id.Q1Actual);
                 EditText Q1RA = (EditText)findViewById(R.id.Q1RA);
@@ -86,7 +71,7 @@ public class MakeQuizActivity extends Activity {
 
                 serializer.startTag(null, "Questions");
                 	serializer.startTag(null, "Question1"); 
-                	serializer.attribute(null, "rightAnswer", "A2");
+                	
                 		serializer.startTag(null, "Q1Text");
                 		serializer.text(Q1Str);
                 		serializer.endTag(null,  "Q1Text");

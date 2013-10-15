@@ -1,5 +1,6 @@
 package com.twotowersstudios.quizmaker;
 
+import ua.com.vassiliev.androidfilebrowser.FileBrowserActivity;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,5 +30,10 @@ public class MainTitleScreen extends Activity {
     	Intent OpenMakeQuizIntent = new Intent(this, MakeQuizActivity.class);
     	startActivity(OpenMakeQuizIntent);
     }
+    public void OpenFileBrowser(View view) {
+    	Intent OpenFileBrowserIntent = new Intent(this, FileBrowserActivity.class);
+    	startActivity(OpenFileBrowserIntent);
+    }
+    
     
 }

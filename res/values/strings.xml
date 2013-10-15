@@ -19,5 +19,7 @@
     <string name="Question1MakeQuiz">Question 1</string>
     <string name="ReportBugMainScreen">Report a Bug</string>
     <string name="SendBugReportReportABug">Send Bug Report</string>
+    <string name="title_activity_file_browser">Open An Existing Quiz</string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>
